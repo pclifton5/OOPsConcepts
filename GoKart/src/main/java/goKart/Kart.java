@@ -52,5 +52,25 @@ public class Kart {
     public void setLaps(int laps) {
         this.laps = laps;
     }
+<<<<<<< Updated upstream
 
+=======
+    //Methods
+    public String gasFillUp(){
+        if (needGas==true){
+            return "needs fuel!";
+        }else{
+            return "is fueled up and ready to go!";
+        }
+    }
+    //ToString
+
+    @Override
+    public String toString() {
+        return "This kart's name is: " + name + "\n" +
+                "The gas tank is: " + gasFillUp() + "\n" +
+                "Its colors are: " + color + "\n" +
+                "And its ready for: " + laps + " laps before maintenance!";
+    }
+>>>>>>> Stashed changes
 }
