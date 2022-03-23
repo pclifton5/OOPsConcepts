@@ -54,13 +54,14 @@ public class Animal {
         return true;
     }
     public String swim(){
-        return "I can swim";
+        return "I am swimming in Super which is the Animal class...";
     }
     public String run(){
         return "I can run";
     }
 
     //To String
+
     @Override
     public String toString() {
         return "Animal{" +
