@@ -9,13 +9,11 @@ public class Main {
 //        System.out.println(bear.getAge("Everett"));
 //        System.out.println("\n\n");
 
-<<<<<<< Updated upstream
         //Inheritance
         Animal duck = new Duck(50, "Flapper", "Donald");
        // System.out.println(donald.swim());
         System.out.println(duck);
-=======
-<<<<<<< Updated upstream
+
         bear.setName("Bear");
         bear.setAge(5);
 >>>>>>> Stashed changes
