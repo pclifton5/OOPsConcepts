@@ -7,17 +7,19 @@
 package zoo;
 
 //Imports
+import interfaces.Speak;
 import interfaces.communication;
 
 //TODO Discuss: Talk about using TODOS
 
 //Class Declaration
-public class Animal implements communication {
+public class Animal implements Speak {
     //Fields
     private int age;
     private String gender;
     private String name;
 
+    //TODO Comments: Remove
     //Method Overloading - Different parameters and return type
     //Method Overriding - Same method signature different body
 
@@ -70,19 +72,5 @@ public class Animal implements communication {
     }
 
     //TODO Remove: We will be using inheritance so we will not need this.
-    //To String
-    @Override
-    public String toString() {
-        return "Animal{" +
-                "age=" + age +
-                ", gender='" + gender + '\'' +
-                ", name='" + name + '\'' +
-                '}';
-    }
-
-    @Override
-    public String speak() {
-        return "I am speaking";
-    }
 
 }

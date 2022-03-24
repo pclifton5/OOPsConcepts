@@ -1,13 +1,36 @@
+//Comments
+/*
+* My Comments
+* */
+
+//Packages
 package zoo;
 
+//Java Imports
+
+//Custom Imports
+
+
+//Class Declaration
 public class Fish extends Animal{
     //Fields
     private int sizeInFeet;
     private boolean canEat;
 
     //Constructors
-    public Fish(int age, String gender, String name) {
+
+    public Fish() {
+    }
+
+    public Fish(int sizeInFeet, boolean canEat) {
+        this.sizeInFeet = sizeInFeet;
+        this.canEat = canEat;
+    }
+
+    public Fish(int age, String gender, String name, int sizeInFeet, boolean canEat) {
         super(age, gender, name);
+        this.sizeInFeet = sizeInFeet;
+        this.canEat = canEat;
     }
 
     //Getters and Setters
@@ -48,6 +71,6 @@ public class Fish extends Animal{
 
     @Override
     public String toString() {
-        return "Fish{}";
+        return "Fish Name: "+getName()+" Fish Age: "+getAge();
     }
 }
