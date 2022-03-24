@@ -16,15 +16,10 @@ public class Main {
 
         bear.setName("Bear");
         bear.setAge(5);
->>>>>>> Stashed changes
 
-
-<<<<<<< Updated upstream
-=======
         System.out.println(bear.getAge("Everett"));
 
         System.out.println("\n\n");
-=======
         //Inheritance
         Animal duck = new Duck(50, "Flapper", "Donald");
         System.out.println(duck);
@@ -34,7 +29,5 @@ public class Main {
         Animal clownFish = new Fish(4, "Flapper","Nemo");
         System.out.println(clownFish);
         System.out.println(clownFish.swim());
->>>>>>> Stashed changes
->>>>>>> Stashed changes
     }
 }

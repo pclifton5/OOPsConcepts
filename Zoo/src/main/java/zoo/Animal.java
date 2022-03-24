@@ -1,20 +1,29 @@
+//Developer Comments
+/*
+ * This is where you would put your comments.
+ * */
+
+//Package
 package zoo;
 
-public class Animal {
+//Imports
+import interfaces.communication;
+
+//TODO Discuss: Talk about using TODOS
+
+//Class Declaration
+public class Animal implements communication {
     //Fields
     private int age;
     private String gender;
     private String name;
 
     //Method Overloading - Different parameters and return type
-    //Method Overriding - Same method signature return dynamic
+    //Method Overriding - Same method signature different body
 
     //Constructors
-
     public Animal() {
     }
-
-    //Parameterized Constructors
     public Animal(int age, String gender, String name) {
         this.age = age;
         this.gender = gender;
@@ -26,7 +35,7 @@ public class Animal {
         return age;
     }
     public String getAge(String name) {
-        return "Your name is: "+name+" and your age is: "+getAge();
+        return "Your name is: " + name + " And your age is: " + getAge();
     }
 
     public void setAge(int age) {
@@ -50,18 +59,18 @@ public class Animal {
     }
 
     //Methods
-    public boolean isMammal(){
+    public boolean isMammal() {
         return true;
     }
-    public String swim(){
+    public String swim() {
         return "I am swimming in Super which is the Animal class...";
     }
-    public String run(){
-        return "I can run";
+    public String run() {
+        return "I am running man hear me roar!!!";
     }
 
+    //TODO Remove: We will be using inheritance so we will not need this.
     //To String
-
     @Override
     public String toString() {
         return "Animal{" +
@@ -70,4 +79,10 @@ public class Animal {
                 ", name='" + name + '\'' +
                 '}';
     }
+
+    @Override
+    public String speak() {
+        return "I am speaking";
+    }
+
 }
