@@ -13,7 +13,7 @@ import interfaces.communication;
 //TODO Discuss: Talk about using TODOS
 
 //Class Declaration
-public class Animal implements Speak {
+public class Animal {
     //Fields
     private int age;
     private String gender;
