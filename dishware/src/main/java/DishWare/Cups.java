@@ -37,11 +37,12 @@ public class Cups extends Dishes{
     public String toString() {
         return getItemName()+"\n"+
                 "There are "+getHowMany()+" of these dishes.\n"+
-                "Its the color "+getColor()+"\n"+
-                "Its made out of "+getMaterial()+"\n" +
+                "It's the color "+getColor()+"\n"+
+                "It's made out of "+getMaterial()+"\n" +
                 dishBroken() + "\n" +
                 DishDirty()+"\n" +
-                "its used for "+usedFor;
+                ifCup()+"\n"+
+                "It's used for "+usedFor;
     }
 
 }
