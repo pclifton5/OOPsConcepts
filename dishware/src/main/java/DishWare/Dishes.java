@@ -1,7 +1,8 @@
 package DishWare;
 
-public class Dishes extends Main {
+public class Dishes{
     //Fields
+    private String itemName;
     private int howMany;
     private String color;
     private String material;
@@ -9,7 +10,11 @@ public class Dishes extends Main {
     private boolean isDirty;
 
     //Constructors
-    public Dishes(int howMany, String color, String material, boolean broken, boolean isDirty) {
+    public Dishes() {
+    }
+
+    public Dishes(String itemName,int howMany, String color, String material, boolean broken, boolean isDirty) {
+        this.itemName = itemName;
         this.howMany = howMany;
         this.color = color;
         this.material = material;
@@ -18,6 +23,13 @@ public class Dishes extends Main {
     }
 
     //Getters and Setters
+
+    public String getItemName() {
+        return itemName;
+    }
+    public void setItemName(String itemName) {
+        this.itemName = itemName;
+    }
     public int getHowMany() {
         return howMany;
     }
@@ -59,16 +71,29 @@ public class Dishes extends Main {
     }
 
     //Methods
+    public String dishBroken() {
+        if (broken == true) {
+            return "It's broken";
+        }else{
+            return "It's ready for use";
+        }
+    }
 
+    public String DishDirty(){
+        if(isDirty==true){
+            return "It needs cleaning";
+        }else{
+            return "It's clean";
+        }
+    }
     //ToString
     @Override
     public String toString() {
-        return "Dishes{" +
-                "howMany=" + howMany +
-                ", color='" + color + '\'' +
-                ", material='" + material + '\'' +
-                ", broken=" + broken +
-                ", isDirty=" + isDirty +
-                '}';
+        return itemName+"\n"+
+                "There are "+howMany+" of these dishes.\n"+
+                "Its the color "+color+"\n"+
+                "Its made out of "+material+"\n" +
+                dishBroken() + "\n" +
+                DishDirty();
     }
 }

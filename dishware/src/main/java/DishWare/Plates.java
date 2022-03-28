@@ -5,8 +5,9 @@ public class Plates extends Dishes{
     private boolean fineChina;
 
     //Constructors
-    public Plates(int howMany, String color, String material, boolean broken, boolean isDirty, boolean fineChina) {
-        super(howMany, color, material, broken, isDirty);
+
+    public Plates(String itemName, int howMany, String color, String material, boolean broken, boolean isDirty, boolean fineChina) {
+        super(itemName, howMany, color, material, broken, isDirty);
         this.fineChina = fineChina;
     }
 

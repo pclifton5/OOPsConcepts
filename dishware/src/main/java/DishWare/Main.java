@@ -1,9 +1,14 @@
 package DishWare;
 
+import java.sql.SQLOutput;
+
 public class Main{
     public static void main(String[] args){
-        Dishes blueCup = new Dishes(3, "blue", "plastic", false, false);
+        Dishes blueCup = new Dishes("Blue Cup", 5, "blue", "plastic", false, false);
         System.out.println(blueCup);
-        Cups cups = new Cups();
+        System.out.println("\n");
+
+        Dishes redCup = new Cups("Red Cup", 8, "red", "plastic", true, true, false, "parties");
+        System.out.println(redCup);
     }
 }

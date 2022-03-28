@@ -2,10 +2,12 @@ package DishWare;
 
 public class Cups extends Dishes{
     //Fields
+    private boolean isCup;
     private String usedFor;
     //Constructors
-    public Cups(int howMany, String color, String material, boolean broken, boolean isDirty, String usedFor) {
-        super(howMany, color, material, broken, isDirty);
+    public Cups(String itemName, int howMany, String color, String material, boolean broken, boolean isDirty, boolean isCup, String usedFor) {
+        super(itemName, howMany, color, material, broken, isDirty);
+        this.isCup = isCup;
         this.usedFor = usedFor;
     }
 
@@ -16,16 +18,35 @@ public class Cups extends Dishes{
     public void setUsedFor(String usedFor) {
         this.usedFor = usedFor;
     }
+    public boolean isCup() {
+        return isCup;
+    }
+
+    public void setCup(boolean cup) {
+        isCup = cup;
+    }
 
     //Methods
-    
+    public String ifCup(){
+        if (isCup==true){
+            return "This is a cup";
+        }return "";
+    }
     //ToString
-
     @Override
     public String toString() {
-        return "Cups{" +
-                "usedFor='" + usedFor + '\'' +
-                '}';
+        return getItemName()+"\n"+
+                "There are "+getHowMany()+" of these dishes.\n"+
+                "Its the color "+getColor()+"\n"+
+                "Its made out of "+getMaterial()+"\n" +
+                dishBroken() + "\n" +
+                DishDirty()+"\n" +
+                "its used for "+usedFor;
     }
+
 }
+
+
+
+
 
