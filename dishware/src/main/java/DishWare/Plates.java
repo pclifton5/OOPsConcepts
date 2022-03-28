@@ -23,4 +23,11 @@ public class Plates extends Dishes{
     //Methods
 
     //ToString
+
+    @Override
+    public String toString() {
+        return "Plates{" +
+                "fineChina=" + fineChina +
+                '}';
+    }
 }
