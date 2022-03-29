@@ -33,6 +33,7 @@ public class Cups extends Dishes{
         }return "";
     }
     //ToString
+
     @Override
     public String toString() {
         return getItemName()+"\n"+
@@ -44,8 +45,8 @@ public class Cups extends Dishes{
                 ifCup()+"\n"+
                 "It's used for "+usedFor;
     }
-
 }
+
 
 
 
