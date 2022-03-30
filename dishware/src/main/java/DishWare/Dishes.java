@@ -1,99 +1,82 @@
 package DishWare;
 
+import java.util.ArrayList;
+
 public class Dishes{
     //Fields
     private String itemName;
-    private int howMany;
-    private String color;
-    private String material;
-    private boolean broken;
-    private boolean isDirty;
+    private int stock;
+    private ArrayList<String> colors = new ArrayList<String>();
+    private ArrayList<String> materials = new ArrayList<String>();
+    private double price;
 
     //Constructors
-    public Dishes() {
-    }
 
-    public Dishes(String itemName,int howMany, String color, String material, boolean broken, boolean isDirty) {
+    public Dishes(String itemName, int stock, ArrayList<String> colors, ArrayList<String> materials, double price) {
         this.itemName = itemName;
-        this.howMany = howMany;
-        this.color = color;
-        this.material = material;
-        this.broken = broken;
-        this.isDirty = isDirty;
+        this.stock = stock;
+        this.colors = colors;
+        this.materials = materials;
+        this.price = price;
     }
-
-    //Getters and Setters
+//Getters and Setters
 
     public String getItemName() {
         return itemName;
     }
+
     public void setItemName(String itemName) {
         this.itemName = itemName;
     }
-    public int getHowMany() {
-        return howMany;
+
+    public int getStock() {
+        return stock;
     }
 
-    public void setHowMany(int howMany) {
-        this.howMany = howMany;
+    public void setStock(int stock) {
+        this.stock = stock;
     }
 
-    public String getColor() {
-        return color;
+    public ArrayList<String> getColors() {
+        return colors;
     }
 
-    public void setColor(String color) {
-        this.color = color;
+    public void setColors(ArrayList<String> colors) {
+        this.colors = colors;
     }
 
-    public String getMaterial() {
-        return material;
+    public ArrayList<String> getMaterials() {
+        return materials;
     }
 
-    public void setMaterial(String material) {
-        this.material = material;
+    public void setMaterials(ArrayList<String> materials) {
+        this.materials = materials;
     }
 
-    public boolean isBroken() {
-        return broken;
+    public double getPrice() {
+        return price;
     }
 
-    public void setBroken(boolean broken) {
-        this.broken = broken;
-    }
-
-    public boolean isDirty() {
-        return isDirty;
-    }
-
-    public void setDirty(boolean dirty) {
-        isDirty = dirty;
+    public void setPrice(double price) {
+        this.price = price;
     }
 
     //Methods
-    public String dishBroken() {
-        if (broken == true) {
-            return "It's broken";
-        }else{
-            return "It's ready for use";
-        }
-    }
-
-    public String DishDirty(){
-        if(isDirty==true){
-            return "It needs cleaning";
-        }else{
-            return "It's clean";
+    public String outOfStock(){
+        if (stock <= 0){
+            return "Sorry, but this item is currently unavailable.";
+        }{
+            return "We have "+stock+" "+itemName+" available for purchase.";
         }
     }
     //ToString
     @Override
     public String toString() {
         return itemName+"\n"+
-                "There are "+howMany+" of these dishes.\n"+
-                "Its the color "+color+"\n"+
-                "Its made out of "+material+"\n" +
-                dishBroken() + "\n" +
-                DishDirty();
+                outOfStock()+"\n"+
+                "This item comes in "+getColors()+".\n"+
+                "This item is available in "+getMaterials()+"\n"+
+                "The price is "+price;
+
     }
 }
